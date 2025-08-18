@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: task-client
+server:
+  port: 8083
+user-service:
+    url: http://localhost:8082/api/users
+task-service:
+  url: http://localhost:8081/api/tasks
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+
